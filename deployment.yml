@@ -1,4 +1,4 @@
-template-file-path: deployment.yml
+template-file-path: cloudformation-template.yml
 parameters:
   Project: 'GitSync'
 tags: {}
