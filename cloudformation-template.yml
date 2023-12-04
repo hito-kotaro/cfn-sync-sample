@@ -27,7 +27,7 @@ Resources:
         VPC: !Ref VPC
     DependsOn: VPC
 
-  Subnets:
+  Iam:
     Type: AWS::CloudFormation::Stack
     Properties:
       TemplateURL: 'nest/iam.yml'
