@@ -1,0 +1,4 @@
+template-file-path: deployment.yml
+parameters:
+  Project: 'GitSync'
+tags: {}
