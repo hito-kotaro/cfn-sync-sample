@@ -6,7 +6,7 @@ Parameters:
 
 Resources:
   VPC: 
-    Type: "AWS::EC2::VPC"
+    Type: AWS::EC2::VPC
     Properties: 
       CidrBlock: '10.1.0.0/16'
       EnableDnsSupport: true
@@ -15,5 +15,17 @@ Resources:
       Tags: 
         - Key: Name
           Value: !Sub "${Project}-vpc"
+        - Key: Project
+          Value: !Ref Project
+
+  Subnet: 
+    Type: AWS::EC2::Subnet
+    Properties: 
+      AvailabilityZone: ap-northeast-1a
+      CidrBlock: '10.1.0.0/24' 
+      VpcId: !Ref VPC 
+      Tags: 
+        - Key: Name
+          Value: !Sub "${Project}-subnet-1a"
         - Key: Project
           Value: !Ref Project
