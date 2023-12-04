@@ -18,11 +18,11 @@ Resources:
         - Key: Project
           Value: !Ref Project
 
-  #Subnets:
-    #Type: AWS::CloudFormation::Stack
-    #Properties:
-      #TemplateURL: 'nest/subnet.yml'
-      #Parameters:
-#Project: !Ref Project
-#VPC: !Ref VPC
-    #DependsOn: VPC
+  Subnets:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: 'nest/subnet.yml'
+      Parameters:
+        Project: !Ref Project
+        VPC: !Ref VPC
+    DependsOn: VPC
