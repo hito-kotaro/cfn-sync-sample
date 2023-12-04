@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  Project:
+    Type: String
+  Vcp:
+    Type: String
+
+Resources:
+  Subnet: 
+    Type: AWS::EC2::Subnet
+    Properties: 
+      AvailabilityZone: ap-northeast-1a
+      CidrBlock: '10.1.0.0/24' 
+      VpcId: !Ref VPC 
+      Tags: 
+        - Key: Name
+          Value: !Sub "${Project}-subnet-1a"
+        - Key: Project
+          Value: !Ref Project
