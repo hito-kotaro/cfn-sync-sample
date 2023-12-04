@@ -17,13 +17,3 @@ Resources:
       - Key: Project
         Value:
           Ref: Project
-  Subnets:
-    Type: AWS::CloudFormation::Stack
-    Properties:
-      TemplateURL: https://s3.ap-northeast-1.amazonaws.com/cfn-build-objects/git-sync-sample/590625c05777573fb3ef1e9ab61a07c4.template
-      Parameters:
-        Project:
-          Ref: Project
-        VPC:
-          Ref: VPC
-    DependsOn: VPC
