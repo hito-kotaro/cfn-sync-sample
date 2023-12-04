@@ -20,7 +20,7 @@ Resources:
   Subnets:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://s3.ap-northeast-1.amazonaws.com/cfn-build-objects/git-sync-sample/07fc374ae70c2cb0419611ea53e7c8ce.template
+      TemplateURL: https://s3.ap-northeast-1.amazonaws.com/cfn-build-objects/git-sync-sample/b7e387978574281c4ec94277a5581725.template
       Parameters:
         Project:
           Ref: Project
