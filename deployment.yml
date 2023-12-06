@@ -1,5 +1,3 @@
-template-file-path: build/cloudformation-template.yml
-parameters:
-  Project: 'GitSync'
-tags: 
-  Project: 'GitSync'
+template-file-path: cloudformation-template.yml
+parameters: {}
+tags: {}
