@@ -3,12 +3,14 @@ AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   Project:
     Type: String
+  Cidr:
+    Type: String
 
 Resources:
   VPC: 
     Type: AWS::EC2::VPC
     Properties: 
-      CidrBlock: '10.1.0.0/16'
+      CidrBlock: !Sub '${Cidr}/16'
       EnableDnsSupport: true
       EnableDnsHostnames: true
       InstanceTenancy: default
@@ -25,5 +27,6 @@ Resources:
       Parameters:
         Project: !Ref Project
         VPC: !Ref VPC
+        Cidr: !Ref Cidr
     DependsOn: VPC
 

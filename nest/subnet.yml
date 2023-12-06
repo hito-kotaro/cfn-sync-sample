@@ -5,13 +5,15 @@ Parameters:
     Type: String
   VPC:
     Type: String
+  Cidr:
+    Type: String
 
 Resources:
   Subnet: 
     Type: AWS::EC2::Subnet
     Properties: 
       AvailabilityZone: ap-northeast-1a
-      CidrBlock: '10.1.0.0/24' 
+      CidrBlock: !Sub '${Cidr}/24' 
       VpcId: !Ref VPC 
       Tags: 
         - Key: Name

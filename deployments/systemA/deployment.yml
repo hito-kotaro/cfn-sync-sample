@@ -1,5 +1,6 @@
 template-file-path: /build/cloudformation-template.yml
 parameters:
   Project: 'SystemA'
+  Cidr: '10.0.0.0/16'
 tags: 
   Project: 'SystemA'
