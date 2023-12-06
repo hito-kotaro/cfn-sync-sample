@@ -27,10 +27,3 @@ Resources:
         VPC:
           Ref: VPC
     DependsOn: VPC
-  Iam:
-    Type: AWS::CloudFormation::Stack
-    Properties:
-      TemplateURL: https://s3.ap-northeast-1.amazonaws.com/cfn-build-objects/git-sync-sample/75801b84ea84427ac8f0cc6814b5eab7.template
-      Parameters:
-        Project:
-          Ref: Project
