@@ -1,4 +1,5 @@
 template-file-path: build/cloudformation-template.yml
 parameters:
   Project: 'GitSync'
-tags: {}
+tags: 
+  Project: 'GitSync'
