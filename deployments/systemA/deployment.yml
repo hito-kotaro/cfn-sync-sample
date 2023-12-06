@@ -1,4 +1,4 @@
-template-file-path: ../../build/cloudformation-template.yml
+template-file-path: /build/cloudformation-template.yml
 parameters:
   Project: 'SystemA'
 tags: 
